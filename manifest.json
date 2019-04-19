@@ -1,0 +1,6 @@
+{
+"short_name": "PWAサイト",
+"name": "サンプルのPWAサイト",
+"start_url": "https://sayo0821.github.io/pwa-test-01/",
+"display": "standalone",
+}

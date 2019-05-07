@@ -19,17 +19,30 @@ if ('serviceWorker' in navigator) {
 <script type="text/javascript">
 $(function($){
 <!-- jQueryの処理をここに記載 -->
-  $('#message').text('HTML5+jQuery(GoogleCDN)のブランクSampleです');
-  $("#sample001txt").load("/sample001.txt");
+  $('#message1').text('HTML5+jQuery(GoogleCDN)のブランクSampleです');
+  $('#message2').load('sample001.txt', function(data, status) {
+      if(status === 'success') {
+         console.log('読み込みが正常に行われました');
+      }
+  });
+  $.ajax({
+    type: 'GET',
+    url: 'sample001.txt',
+    success: function(data) {
+        $('#message3').html( data );
+    }
+})
 });
+    
 </script>
 
 </head>
 
 <body>
 <h1>サンプルPWAサイト</h1>
-<div id="message">ロード中・・・</div>
-<p id="sample001txt"></p>
+<div id="message1">ロード中・・・</div>
+<div id="message2">ロード中・・・</div>
+<div id="message3">ロード中・・・</div>
 </body>
 
 </html>

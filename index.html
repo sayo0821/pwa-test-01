@@ -3,7 +3,9 @@
 
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <link rel="manifest" href="manifest.json">
+
 <script>
 // ここから"Service Worker"をサイト内からJavascriptで呼び出す
 if ('serviceWorker' in navigator) {
@@ -13,10 +15,18 @@ if ('serviceWorker' in navigator) {
 }
 // ここまで
 </script>
+
+<script type=”text/javascript”>
+$(document).ready(function(){
+$(“#sample001txt”).load(“sample001.txt”);
+});
+</script>
+
 </head>
 
 <body>
 <h1>サンプルPWAサイト</h1>
+<p id=”sample001txt”></p>
 </body>
 
 </html>

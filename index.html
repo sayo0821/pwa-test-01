@@ -4,14 +4,19 @@
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <link rel="manifest" href="manifest.json">
+<script>
+// ここから"Service Worker"をサイト内からJavascriptで呼び出す
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker
+        .register('/service-worker.js') // ここはservice-worker.jsのパスを指定
+        .then(function() { console.log('Service Worker Registered'); });
+}
+// ここまで
+</script>
 </head>
 
 <body>
 <h1>サンプルPWAサイト</h1>
-
-<script>
-</script>
-
 </body>
 
 </html>

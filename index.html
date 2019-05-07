@@ -17,8 +17,10 @@ if ('serviceWorker' in navigator) {
 </script>
 
 <script type="text/javascript">
-$(document).ready(function(){
-    $("#sample001txt").load("/sample001.txt");
+$(function($){
+<!-- jQueryの処理をここに記載 -->
+  $('#message').text('HTML5+jQuery(GoogleCDN)のブランクSampleです');
+  $("#sample001txt").load("/sample001.txt");
 });
 </script>
 
@@ -26,6 +28,7 @@ $(document).ready(function(){
 
 <body>
 <h1>サンプルPWAサイト</h1>
+<div id="message">ロード中・・・</div>
 <p id="sample001txt"></p>
 </body>
 
